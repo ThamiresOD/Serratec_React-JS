@@ -1,0 +1,15 @@
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 10vh;
+}
+
+button {
+    margin: 15px;
+}
+
+
