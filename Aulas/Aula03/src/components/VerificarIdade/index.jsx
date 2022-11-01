@@ -3,7 +3,8 @@ import './style.css'
 
 function VerificarIdade() {
     const [nome, setNome] = useState("")
-    const [idade, setIdade] = useState()
+    const [idade, setIdade] = useState("")
+    const [secret, setSecret] = useState("")
 
     let print = ""
     let menssage = ""
@@ -14,22 +15,15 @@ function VerificarIdade() {
         if (!idade == 0) {
             if (idade >= 18) {
                 print = "maior"
+                show = (<h6> Pode pegar seu caneco 🍻 </h6>)
             } else {
                 print = "menor"
-                
+                show = (<h6> Vai arrumar sua cama! 👼</h6>)
             }
             menssage = (<h6>Olá {nome}, você é {print} de idade.</h6>)
         }
     }
-    
-    let secret = false
-    const on = () => {
-        secret = true
-    }
 
-    // const secretMenssage = () => {
-    //     <h6> Pode pegar seu caneco 🍻 </h6>
-    // }
 
     return (
         <>
@@ -52,8 +46,7 @@ function VerificarIdade() {
             </div>
             <h1>{menssage}</h1>
             <div>
-                <button onClick={on}> Show secret menssage </button>
-                {/* <h3>{secretMessage}</h3> */}
+                <button onClick={secret}> Show secret menssage </button>
             </div>
         </>
     )

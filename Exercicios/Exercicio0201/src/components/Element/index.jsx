@@ -20,7 +20,6 @@ function Agua() {
 
     return (
         <>
-         <h1>olá</h1>
         </>
     )
 }
