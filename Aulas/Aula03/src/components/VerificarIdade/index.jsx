@@ -7,11 +7,11 @@ function VerificarIdade() {
     const [secret, setSecret] = useState("")
 
     let print = ""
-    let menssage = ""
+    let message = ""
     let show = ""
 
     if (!nome == "") {
-        menssage = (<h6>Olá {nome}!</h6>)
+        message = (<h6>Olá {nome}!</h6>)
         if (!idade == 0) {
             if (idade >= 18) {
                 print = "maior"
@@ -20,7 +20,7 @@ function VerificarIdade() {
                 print = "menor"
                 show = (<h6> Vai arrumar sua cama! 👼</h6>)
             }
-            menssage = (<h6>Olá {nome}, você é {print} de idade.</h6>)
+            message = (<h6>Olá {nome}, você é {print} de idade.</h6>)
         }
     }
 
@@ -44,9 +44,9 @@ function VerificarIdade() {
                     value={idade}
                     onChange={e => setIdade(e.target.value)} />
             </div>
-            <h1>{menssage}</h1>
+            <h1>{message}</h1>
             <div>
-                <button onClick={secret}> Show secret menssage </button>
+                <button onClick={show}> Show secret menssage </button>
             </div>
         </>
     )

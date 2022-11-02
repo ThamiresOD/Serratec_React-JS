@@ -1,8 +1,10 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 
 const ContatoDetalhes = () => {
     const { id } = useParams();
+    const { state } = useLocation();
 
+    console.log(state)
     console.log(typeof (id));
 
     const renderizaNome = () => {
@@ -19,6 +21,7 @@ const ContatoDetalhes = () => {
         }
     }
 
+    //Renderização Condicional
     // Operador Lógico
     //{id == '3' && "Thata"}
 
@@ -26,10 +29,27 @@ const ContatoDetalhes = () => {
     //{id == 3 ? "Thata" : null
 
 
-    return (
-        <h1>
-            Contato: {renderizaNome()}
-        </h1>
-    )
+    // return (
+    //     <h1>
+    //         Contato: {renderizaNome()}
+    //     </h1>
+    // )
+
+    // return (
+    //     <h1> 
+    //         {/* Renderização Condicional com operador lógico */}
+    //         {id == '2' && "Contato: Amanda que veio do &&"}
+    //         {/* Contato: {renderizaNome()} */}
+    //         {/* Renderização condicional com operador Ternário */}
+    //         {id == 3 ? "Caroline do Operador ternário" : null}
+    //     </h1>
+    // );
+
+        return (
+            <h1>
+                {state.nome}
+            </h1>
+            
+        )
 }
 export default ContatoDetalhes
