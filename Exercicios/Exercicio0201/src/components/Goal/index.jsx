@@ -4,15 +4,16 @@ import Agua from '../Agua'
 
 // function Element() {
 //     const [count, setCount] = useState(0)
-//     var x = document.createElement("INPUT");
-//     x.setAttribute("type", "button");
-//     x.setAttribute("value", '🍺');
-//     document.body.appendChild(x);
+//     var x = document.createElement("INPUT")
+//     x.setAttribute("type", "button")
+//     x.setAttribute("value", '🍺')
+//     document.body.appendChild(x)
 
 //     return (
 //         <button onClick={Element + (count=1)}>Add!</button>
 //     )
-//   }
+// }
+
 //   export default Element
 
 function Goal(props) {

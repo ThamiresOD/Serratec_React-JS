@@ -13,19 +13,7 @@ div {
     padding: 2rem;
     text-align: center;
   }
-  
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
+   
   .card {
     padding: 2em;
   }
@@ -36,7 +24,7 @@ div {
 
   .historico {
     display: flex;
-    width: 40vw;
+    width: 210px;
   }
   
   nav {
@@ -46,8 +34,34 @@ div {
     border: 2px solid #535bf2;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 15px;
+    padding: 5%;
+    margin: 5%;
   }
+  
+  label {
+    font-size: 1.5rem;
+  }
+
+  header { 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #535bf2;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    margin: 5%;
+  }
+
+  #bottons {
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #535bf2;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    margin: 5%;
+  }
+
 
 
 
