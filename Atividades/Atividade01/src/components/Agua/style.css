@@ -1,0 +1,63 @@
+
+button {
+    margin: 15px;
+}
+
+div {
+    margin: 5vh;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+   
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+
+  .historico {
+    display: flex;
+    width: 210px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #535bf2;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    margin: 5%;
+  }
+  
+  label {
+    font-size: 1.5rem;
+  }
+
+  header { 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #535bf2;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    margin: 5%;
+  }
+
+  #bottons {
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #535bf2;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5%;
+    margin: 5%;
+  }
