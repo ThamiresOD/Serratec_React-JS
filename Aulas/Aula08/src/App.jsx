@@ -1,30 +1,66 @@
 
+import { useState } from 'react'
 import './App.css'
-import { GiChameleonGlyph } from "react-icons/gi"
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { FaLinkedin, FaReact } from 'react-icons/fa'
+import { Button, Container, Row, Col, Form, Stack} from 'react-bootstrap';
+
+const tasks = [
+  {
+    id: 1,
+    titulo: "Primeira Task",
+    descricao: "Descrição da Primeira Task",
+    prioridade: "URGENTE"
+  },
+  {
+    id: 2,
+    titulo: "Segunda Task",
+    descricao: "Descrição da Segunda Task",
+    prioridade: "URGENTE"
+  },
+  {
+    id: 3,
+    titulo: "Terceira Task",
+    descricao: "Descrição da Terceira Task",
+    prioridade: "URGENTE"
+  },
+]
 
 function App() {
+  const [titulo, setTitulo] = useState("")
+  const [descricao, setDescricao] = useState("")
+
+  const handleTask = () => {
+
+  }
+
   return (
-    <Container style={{ backgroundColor: "gray" }}>
+    <Container className="bg-secondary">
+      <h1 className='text-center'>Lista de Tarefas</h1>
 
-      {/* <h1>React Icons</h1>
-      <h2>Camaleão / Chameleon</h2>
+      <Form>
+        <Form.Group className="mb-3" >
+          <Form.Label>Título:</Form.Label>
+          <Form.Control type="text" placeholder="Insira o título" onChange={ e => setTitulo(e.target.value)} value={titulo} />
+        </Form.Group>
+        <Form.Select aria-label="Default select example" onChange={ e => console.log(e.target.value)}>
+          <option>Escolha a prioridade</option>
+          <option value="baixa">Baixa</option>
+          <option value="normal">Normal</option>
+          <option value="urgente">Urgente</option>
+        </Form.Select>
+        <Form.Group className="mb-3">
+          <Form.Label>Descrição: </Form.Label>
+          <Form.Control as="textarea" rows={3} onChange={ e => setDescricao(e.target.value)} value={descricao} />
+        </Form.Group> 
 
-      <div className='camaleao'>
-        <GiChameleonGlyph />
-      </div> */}
+        <Button className="float-end" onClick={handleTask}>Cadastrar Nova Tarefa</Button>
+      </Form>
 
-      <Row style={{ backgroundColor: "darkgoldenrod", padding: 30 }}>
-        <Col style={{ backgroundColor: "lightgray" }}>12 COLUNAS</Col>
-      </Row>
-      <Row style={{ backgroundColor: "darkgoldenrod", padding: 30 }}>
-        <Col md={9} style={{ backgroundColor: "lightgray" }}>6 COLUNAS</Col>
-        <Col md={3} style={{ backgroundColor: "lightgray" }}>6 COLUNAS</Col>
-      </Row>
-      <Row style={{ backgroundColor: "darkgoldenrod", padding: 30 }}>
-        <Col md={8} style={{ backgroundColor: "lightgray" }}>6 COLUNAS</Col>
-      </Row>
-
+      <Stack>
+      {tasks.map( item => {
+        return <li key={item.id}>{item.titulo}</li>
+      })}
+      </Stack>
 
     </Container>
 
@@ -32,5 +68,4 @@ function App() {
 }
 
 export default App
-
 
