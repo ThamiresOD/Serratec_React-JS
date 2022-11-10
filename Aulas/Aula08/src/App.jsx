@@ -28,10 +28,41 @@ const tasks = [
 function App() {
   const [titulo, setTitulo] = useState("")
   const [descricao, setDescricao] = useState("")
+  const [prioriodade, setPrioridade] = useState("")
+  const [taskList, setTaskList] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  const handleTask = () => {
+  const handleTask = async () => {
+    if(titulo == "" || prioriodade == "" || descricao == "") {
+      alert("Preencha todos os campos")
+      return
+    }
+    
+    const newTask = {
+      titulo: titulo,
+      descricao: descricao,
+      prioriodade: prioriodade,
+    }
 
+    const { data } = await api.post("/tasks", newTask)
+    setTaskList([...taskList, data])
+    console.log(data)
+
+
+    setTitulo("")
+    setDescricao("")
+    setPrioridade("")
   }
+
+  useEffect(() => {
+    const getTasks = async () => {
+      setLoading(true)
+      const { data } = await api.get("/tasks");
+      setTaskList(data)
+      setLoading(false)
+    }
+    getTasks()
+  }, [])
 
   return (
     <Container className="bg-secondary">
